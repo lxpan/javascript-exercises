@@ -9,6 +9,12 @@ const sumAll = function(start, end) {
         return 'ERROR'
     }
 
+    if(start > end) {
+        _temp = start;
+        start = end;
+        end = _temp;
+    }
+
     for(let i = start; i <= end; i++) {
         sum += i;
     }
