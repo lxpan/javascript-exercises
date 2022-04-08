@@ -1,11 +1,11 @@
 const findTheOldest = function(array) {
     const sorted = array.sort((a, b) => {
         const currentYear = new Date().getFullYear();
-        
+
         let ageA = a.yearOfDeath - a.yearOfBirth;
         let ageB = b.yearOfDeath - b.yearOfBirth;
 
-        if(a.hasOwnProperty('yearOfDeath') === false) {
+        if(!a.hasOwnProperty('yearOfDeath')) {
             ageA = currentYear - a.yearOfBirth;
         } else if(b.hasOwnProperty('yearOfDeath') === false) {
             ageB = currentYear - b.yearOfBirth;
